@@ -1,6 +1,6 @@
 # AI-Waifu-Vtuber
 
-Program AI Virtual Waifu yang menggunakan OpenAI API, DeepSeek, VoiceVox, dan teknologi AI lainnya untuk membuat asisten virtual interaktif.
+Proyek chatbot AI Vtuber dengan fitur suara dan percakapan.
 
 ## Fitur
 
@@ -9,6 +9,15 @@ Program AI Virtual Waifu yang menggunakan OpenAI API, DeepSeek, VoiceVox, dan te
 - **Text-to-Speech**: Mengubah respons teks menjadi suara dengan aksen Jepang/Inggris.
 - **YouTube Chat Integration**: Membaca dan merespons chat dari YouTube livestream.
 - **Multi-bahasa**: Mendukung penerjemahan antar bahasa.
+
+## Cara Penggunaan
+
+1. Install dependencies: `pip install -r requirements.txt`
+2. Jalankan script: `python run.py`
+
+---
+
+Silakan lengkapi README ini sesuai kebutuhan proyekmu.
 
 ## Persyaratan
 
