@@ -1,0 +1,18 @@
+# requirements.txt untuk AI-Waifu-Vtuber
+# Pastikan gunakan Python 3.10 atau 3.11 untuk kompatibilitas maksimal
+
+# Library utama
+openai-whisper
+pytchat
+pyaudio
+keyboard
+torch
+requests
+deep-translator
+langdetect
+g4f
+alkana
+
+# Catatan:
+# - Jika ada library lain yang digunakan di luar daftar ini, tambahkan secara manual.
+# - Untuk Windows, beberapa library (misal pyaudio, torch) kadang perlu diinstall dari wheel.
