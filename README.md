@@ -1,250 +1,195 @@
-# AI-Waifu-Vtuber
+# AI-VTuber-Chatbot
 
-Proyek chatbot AI Vtuber dengan fitur suara dan percakapan.
+An AI-powered interactive virtual assistant featuring a VTuber avatar. This project uses OpenAI API, DeepSeek, VoiceVox, and other AI technologies to create a responsive AI chatbot with real-time voice and visual interaction.
 
-## Fitur
+## Features
 
-- **Voice Recognition**: Mengenali suara melalui microphone dan mengubahnya menjadi teks.
-- **AI Conversation**: Menggunakan model AI (DeepSeek) untuk generasi respons natural.
-- **Text-to-Speech**: Mengubah respons teks menjadi suara dengan aksen Jepang/Inggris.
-- **YouTube Chat Integration**: Membaca dan merespons chat dari YouTube livestream.
-- **Multi-bahasa**: Mendukung penerjemahan antar bahasa.
+* **Voice Recognition**: Capture microphone input and convert to text via speech recognition.
+* **AI Conversation**: Natural response generation using DeepSeek and other LLMs.
+* **Text-to-Speech**: Convert AI responses to speech in Japanese, English, and more.
+* **YouTube Chat Integration**: Read and respond to messages from YouTube live chat.
+* **Multi-language Support**: Translate between languages as needed.
 
-## Cara Penggunaan
+## Requirements
 
-1. Install dependencies: `pip install -r requirements.txt`
-2. Jalankan script: `python run.py`
-
----
-
-Silakan lengkapi README ini sesuai kebutuhan proyekmu.
-
-## Persyaratan
-
-- Python 3.8 atau lebih tinggi
-- Semua dependensi yang tercantum dalam `requirements.txt`
-- API key untuk OpenRouter (untuk akses ke DeepSeek)
-- VoiceVox (opsional, untuk TTS Jepang yang lebih baik)
-
-## Instalasi
-
-### Windows
-
-1. Pastikan Python terinstal
-2. Jalankan `install.bat` untuk menginstal semua dependensi
-3. Jika `install.bat` tidak berfungsi, coba jalankan `python install_dependencies.py`
-4. Jika ingin menggunakan VoiceVox, unduh dan jalankan VoiceVox Engine dari [situs resmi](https://voicevox.hiroshiba.jp/)
-
-### Linux / macOS
-
-1. Pastikan Python terinstal
-2. Jalankan script `run.sh`:
-   ```
-   chmod +x run.sh
-   ./run.sh
-   ```
-3. Atau instal dependensi secara manual:
-   ```
-   python3 -m pip install -r requirements.txt
-   ```
-
-## Konfigurasi
-
-Edit file `config.py` untuk mengatur:
-- `API_KEY`: API key dari OpenRouter
-- `API_BASE`: URL API (default: OpenRouter)
-- `API_MODEL`: Model AI yang digunakan
-- `WHISPER_MODEL`: Model untuk transkripsi suara
-
-## Penggunaan
-
-Jalankan program dengan:
-
-```
-python run.py
-```
-
-Pilih mode:
-1. **Mode Mic**: Rekam suara dengan menekan dan menahan tombol RIGHT_SHIFT
-2. **Mode YouTube**: Masukkan ID livestream YouTube untuk berinteraksi dengan chat
-3. **Mode Twitch**: (sedang dinonaktifkan)
-
-## File Karakter
-
-Buat/edit karakter dalam folder `characterConfig/[NamaKarakter]/identity.txt`
-
-## Kontribusi
-
-Kontribusi selalu diterima. Silakan buat pull request atau laporkan masalah melalui Issues.
-
-## Lisensi
-
-[MIT License](LICENSE)
-
-# Support
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/R6R7AH1FA)
-
-## Update
-
-v3.5 Now it also supports for Twitch Streamer
-
-v3.0 Now not only supports Japanese TTS using VoiceVox. But also supports TTS for RU (Russian), EN (English), DE (German), ES (Spanish), FR (French), TT (Tatar), UA (Ukrainian), UZ (Uzbek), XAL (Kalmyk), Indic (Hindi), using Seliro TTS. Change `voicevox_tts` on `run.py` to `seliro_tts`, for detailed information of how to use [Seliro TTS](https://github.com/snakers4/silero-models#text-to-speech)
-
-## AI Waifu Vtuber & Assistant
-
-This project is inspired by shioridotdev and utilizes various technologies such as VoiceVox Engine, DeepL, Whisper OpenAI, Seliro TTS and VtubeStudio to create an AI waifu virtual YouTuber.
-
-![My Remote Image](https://github.com/ardha27/AI-Waifu-Vtuber/blob/master/ss.png?raw=true)
-
-## Demo
- - [Demo](https://www.youtube.com/shorts/_mKVr3ZaM9Q)
- - [Live Test](https://youtu.be/h6UEgJxH1-E?t=1616)
- - [Code Explain](https://youtu.be/qpNG9qrcmrQ)
- - [Clip](https://www.youtube.com/watch?v=qTkESIBd5Qk)
-
-## Technologies Used
-
- - [VoiceVox Docker](https://hub.docker.com/r/voicevox/voicevox_engine) or [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SociallyIneptWeeb/LanguageLeapAI/blob/main/src/run_voicevox_colab.ipynb)
- - [DeepL](https://www.deepl.com/fr/account/summary)
- - [Deeplx](https://github.com/OwO-Network/DeepLX)
- - [Whisper OpenAI](https://platform.openai.com/account/api-keys)
- - [Seliro TTS](https://github.com/snakers4/silero-models#text-to-speech)
- - [VB-Cable](https://vb-audio.com/Cable/)
- - VtubeStudio
-
+* Python 3.8+
+* Dependencies listed in `requirements.txt`
+* OpenRouter API key for DeepSeek access
+* VoiceVox (optional for better Japanese TTS)
 
 ## Installation
 
-1. Install the dependencies
+### Windows
 
+1. Ensure Python is installed
+2. Run `install.bat` to install all dependencies
+3. If that fails, use `python install_dependencies.py`
+4. Download and launch VoiceVox Engine from [official site](https://voicevox.hiroshiba.jp/) (optional)
+
+### Linux / macOS
+
+1. Make sure Python is installed
+
+2. Make `run.sh` executable and run it:
+
+   ```bash
+   chmod +x run.sh
+   ./run.sh
+   ```
+
+3. Or manually install dependencies:
+
+   ```bash
+   python3 -m pip install -r requirements.txt
+   ```
+
+## Configuration
+
+Edit `config.py` to set:
+
+* `API_KEY`: your OpenRouter API key
+* `API_BASE`: default API base URL
+* `API_MODEL`: AI model name
+* `WHISPER_MODEL`: speech-to-text model
+
+## Usage
+
+Run the program with:
+
+```bash
+python run.py
 ```
+
+Choose a mode:
+
+1. **Mic Mode**: Press and hold RIGHT\_SHIFT to speak
+2. **YouTube Mode**: Input YouTube livestream ID to engage with chat
+3. **Twitch Mode**: (currently disabled)
+
+## Character Configuration
+
+Create or edit characters in `characterConfig/[CharacterName]/identity.txt`
+
+## Contribution
+
+Contributions are welcome! Submit a pull request or report issues.
+
+## License
+
+[MIT License](LICENSE)
+
+## Support
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/R6R7AH1FA)
+
+## Updates
+
+### v3.5
+
+* Now supports Twitch streamer chat
+
+### v3.0
+
+* VoiceVox Japanese TTS
+* Added multilingual support (EN, RU, DE, FR, HI, ES, etc.) using Silero TTS
+
+Switch between TTS engines in `run.py`:
+
+```python
+# For Japanese:
+voicevox_tts(tts)
+
+# For multilingual:
+silero_tts(tts_en, "en", "v3_en", "en_21")
+```
+
+## Technologies Used
+
+* [VoiceVox Engine](https://hub.docker.com/r/voicevox/voicevox_engine) or [VoiceVox Colab](https://colab.research.google.com/github/SociallyIneptWeeb/LanguageLeapAI/blob/main/src/run_voicevox_colab.ipynb)
+* [DeepL](https://www.deepl.com)
+* [DeepLx](https://github.com/OwO-Network/DeepLX)
+* [OpenAI Whisper](https://platform.openai.com/account/api-keys)
+* [Silero TTS](https://github.com/snakers4/silero-models#text-to-speech)
+* [VB-Cable](https://vb-audio.com/Cable/)
+* VtubeStudio
+
+## Installation Steps (Extended)
+
+1. Install dependencies:
+
+```bash
 pip install -r requirements.txt
 ```
 
-2. Create config.py and store your Openai API key
+2. Create `config.py` and add:
 
-```
+```python
 api_key = 'yourapikey'
+owner_name = 'YourName'
 ```
 
-3. Change the owner name
+3. (Optional) Add blacklist users in `run.py`:
 
-```
-owner_name = "Ardha"
-```
-
-if you want to use it for livestream, create a list of users that you want to blacklist on `run.py`
-
-```
+```python
 blacklist = ["Nightbot", "streamelements"]
 ```
 
-4. Change the lore or identity of your assistant. Change the txt file at `characterConfig\Pina\identity.txt`
+4. Edit assistant character lore in:
 
-5. If you want to stream on Twitch you need to change the config file at `utils/twitch_config.py`. Get your token from [Here](https://twitchapps.com/tmi/). Your token should look something like oauth:43rip6j6fgio8n5xly1oum1lph8ikl1 (fake for this tutorial). After you change the config file, you can start the program using Mode - 3
-```
-server = 'irc.chat.twitch.tv'
-port = 6667
-nickname = 'testing' # You don't need to change this
-token = 'oauth:43rip6j6fgio8n5xly1oum1lph8ikl1' # get it from https://twitchapps.com/tmi/.
-user = 'ardha27' # Your Twitch username
-channel = '#aikohound' # The channel you want to retrieve messages from
+```text
+characterConfig/Pina/identity.txt
 ```
 
-6. Choose which TTS you want to use, `VoiceVox` or `Silero`. Uncomment and Comment to switch between them
+5. For Twitch integration, configure `utils/twitch_config.py` with your credentials and token from [Twitch Token Generator](https://twitchapps.com/tmi/)
 
-```
-# Choose between the available TTS engines
-# Japanese TTS
-voicevox_tts(tts)
+6. Choose TTS engine (`VoiceVox` or `Silero`) in `run.py`
 
-# Silero TTS, Silero TTS can generate English, Russian, French, Hindi, Spanish, German, etc. Uncomment the line below. Make sure the input is in that language
-# silero_tts(tts_en, "en", "v3_en", "en_21")
-```
+7. Configure translation method in `utils/translate.py`
 
-If you want to use VoiceVox, you need to run VoiceVox Engine first. You can run them on local using [VoiceVox Docker](https://hub.docker.com/r/voicevox/voicevox_engine) or on Google Colab using [VoiceVox Colab](https://github.com/SociallyIneptWeeb/LanguageLeapAI/blob/main/src/run_voicevox_colab.ipynb). If you use the Colab one, change `voicevox_url` on `utils\TTS.py` using the link you get from Colab.
+* `translate_deeplx()` or `translate_google()`
 
-```
-voicevox_url = 'http://localhost:50021'
-```
+8. For OBS integration:
 
-if you want to see the voice list of VoiceVox you can check this [VoiceVox](https://voicevox.hiroshiba.jp) and see the speaker id on `speaker.json` then change it on `utils/TTS.py`. For Seliro Voice sample you can check this [Seliro Samples](https://oobabooga.github.io/silero-samples/index.html)
-
-7. Choose which translator you want to use depends on your use case (optional if you need translation for the answers). Choose between google translate or deeplx. You need to convert the answer to Japanese if you want to use `VoiceVox`, because VoiceVox only accepts input in Japanese. The language answer from OpenAI will depens on your assistant lore language `characterConfig\Pina\identity.txt` and the input language
-
-```
-tts = translate_deeplx(text, f"{detect}", "JA")
-tts = translate_google(text, f"{detect}", "JA")
-```
-
-`DeepLx` is free version of `DeepL` (No API Key Required). You can run [Deeplx](https://github.com/OwO-Network/DeepLX) on docker, or if you want to use the normal version of deepl, you can make the function on `utils\translate.py`. I use `DeepLx` because i can't register on `DeepL` from my country. The translate result from `DeepL` is more accurate and casual than Google Translate. But if you want the simple way, just use Google Translate.
-
-8. If you want to use the audio output from the program as an input for your `Vtubestudio`. You will need to capture your desktop audio using `Virtual Cable` and use it as input on VtubeStudio microphone.
-
-9. If you planning to use this program for live streaming Use `chat.txt` and `output.txt` as an input on OBS Text for Realtime Caption/Subtitles
+* Use `chat.txt` and `output.txt` as inputs for OBS live subtitles
 
 ## FAQ
 
-1. Error Transcribing Audio
+### 1. Audio Transcription Error
 
-```
+Replace try-catch to print detailed error:
+
+```python
 def transcribe_audio(file):
     global chat_now
-    try:
-        audio_file= open(file, "rb")
-        # Translating the audio to English
-        # transcript = openai.Audio.translate("whisper-1", audio_file)
-        # Transcribe the audio to detected language
-        transcript = openai.Audio.transcribe("whisper-1", audio_file)
-        chat_now = transcript.text
-        print ("Question: " + chat_now)
-    except:
-        print("Error transcribing audio")
-        return
-
-    result = owner_name + " said " + chat_now
-    conversation.append({'role': 'user', 'content': result})
-    openai_answer()
-```
-
-Change this Line of Code to this. This will help you to get more information about the error
-
-```
-def transcribe_audio(file):
-    global chat_now
-    audio_file= open(file, "rb")
-    # Translating the audio to English
-    # transcript = openai.Audio.translate("whisper-1", audio_file)
-    # Transcribe the audio to detected language
+    audio_file = open(file, "rb")
     transcript = openai.Audio.transcribe("whisper-1", audio_file)
     chat_now = transcript.text
-    print ("Question: " + chat_now)
-
+    print("Question: " + chat_now)
 
     result = owner_name + " said " + chat_now
     conversation.append({'role': 'user', 'content': result})
     openai_answer()
 ```
 
-Another option to solve this problem, you can upgrade the OpenAI library to the latest version. Make sure the program capture your voice/sentence, try to hear the `input.wav`
+### 2. Mecab / Katakana Error
 
-2. Mecab Error
+Remove these lines from `utils/TTS.py` if MeCab errors:
 
-this library is a little bit tricky to install. If you facing this problem, you can just delete and don't use the `katakana_converter` on `utils/TTS.py`. That function is optional, you can run the program without it. Delete this two line on `utils/TTS.py`  
-
-```
+```python
 from utils.katakana import *
 katakana_text = katakana_converter(tts)
 ```
 
-and just pass the `tts` to next line of the code
+Pass `tts` directly:
 
-```
-params_encoded = urllib.parse.urlencode({'text': tts, 'speaker': 46})
+```python
+params_encoded = urllib.parse.urlencode({'text': tts, 'speaker': 46})
 ```
 
 ## Credits
 
-This project is inspired by the work of shioridotdev. Special thanks to the creators of the technologies used in this project including VoiceVox Engine, DeepL, Whisper OpenAI, and VtubeStudio.
+Inspired by the work of **shioridotdev**. Thanks to the creators of VoiceVox, DeepL, Whisper, VtubeStudio, and Silero for enabling this project.
 
+## Demo
+
+not yet
