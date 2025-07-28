@@ -76,8 +76,3 @@ All contributions are welcome! Feel free to:
 
 MIT License — free for personal and commercial use.
 
----
-
-## ☕ Support
-
-Like this project? Buy me a coffee on [Ko-fi](https://ko-fi.com/ardhach)
