@@ -41,7 +41,7 @@ def install_pip():
             
             subprocess.check_call([sys.executable, "get-pip.py"])
             
-            # Bersihkan
+    
             if os.path.exists("get-pip.py"):
                 os.remove("get-pip.py")
                 
@@ -76,7 +76,6 @@ def install_mecab():
     print("Menginstal MeCab dan unidic-lite...")
     try:
         if platform.system() == "Windows":
-            # Windows memerlukan penanganan khusus untuk MeCab
             subprocess.check_call([sys.executable, "-m", "pip", "install", "unidic-lite"])
         else:
             # Untuk Linux/Mac
